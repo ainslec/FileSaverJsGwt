@@ -15,6 +15,8 @@
  */
 package org.consoli.filesaver.client;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * Trivial wrapper around the FileSaverJS library ( https://github.com/eligrey/FileSaver.js/ )<br></br><br></br>
  * Allows modern web browsers to save Currently only supports saving as text, but will add more methods in later releases.
@@ -23,8 +25,15 @@ package org.consoli.filesaver.client;
  *
  */
 public class FileSaver {
+   
 	public native static void saveText(String fileName, String text) /*-{
 		var textMessage = new Blob([text],{type: "text/plain;charset=utf-8"});
 		$wnd.saveAs(textMessage, fileName);
 	}-*/;
+	
+
+  public native static void saveBlob(String fileName, JavaScriptObject blob) /*-{
+     $wnd.saveAs(blob, fileName);
+  }-*/;
+
 }
