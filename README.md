@@ -10,9 +10,12 @@ FileSaverJsGwt is a tiny and trivial GWT wrapper around filesaver.js library. Th
 
 >              <inherits name='org.consoli.filesaver.FileSaver'/>
 
-3. Use the fileSaver.saveText method to save text to a file via the browser.
+3. Use the FileSaver.saveText() or FileSaver.saveBlob() methods to save text or binary information to a file via the browser.
 
+>              // To save as text
 >              FileSaver.saveText(fileName, fileText);
+>              // To save binary information
+>              FileSaver.saveBlob(fileName, blob); // The blob must be a JavascriptObject representing a standard Blob object.
 
 ## Compatibility
 
@@ -20,7 +23,8 @@ Requires a modern version of IE (10+) or Firefox (25+) or Chrome or Safari (6.1+
 
 ## History 
 
-Version 0.1 - November 20, 2015 - Initial Release, saves text only, no binary save.
+* Version 0.1 - November 20, 2015 - Initial Release, saves text only, no binary save.
+* Version 0.2 - September 22, 2016 - Added saveBlob() method, for saving files containing binary content.
 
 ## Licenses
 
