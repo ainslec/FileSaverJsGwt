@@ -9,7 +9,7 @@
 	<packaging>gwt-lib</packaging>
 	<name>gwt-filesaver</name>
 	<description>A GWT wrapper around the 'filesaver.js' library (by Eli Grey). Allows files to be saved from a web page.</description>
-
+	<url>https://github.com/ainslec/FileSaverJsGwt</url>
 	<properties>
 		<gwt.version>2.8.2</gwt.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -71,6 +71,31 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
