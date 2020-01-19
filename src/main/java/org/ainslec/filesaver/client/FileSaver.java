@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.consoli.filesaver.client;
+package org.ainslec.filesaver.client;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -36,4 +36,5 @@ public class FileSaver {
      $wnd.saveAs(blob, fileName);
   }-*/;
 
+	
 }

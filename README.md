@@ -8,7 +8,7 @@ FileSaverJsGwt is a tiny and trivial GWT wrapper around filesaver.js library. Th
 
 2. Add the following line to your .gwt.xml file
 
->              <inherits name='org.consoli.filesaver.FileSaver'/>
+>              <inherits name='org.ainslec.filesaver.FileSaver'/>
 
 3. Use the FileSaver.saveText() or FileSaver.saveBlob() methods to save text or binary information to a file via the browser.
 
@@ -23,8 +23,9 @@ Requires a modern version of IE (10+) or Firefox (25+) or Chrome or Safari (6.1+
 
 ## History 
 
-* Version 0.1 - November 20, 2015 - Initial Release, saves text only, no binary save.
-* Version 0.2 - September 22, 2016 - Added saveBlob() method, for saving files containing binary content.
+* Version 0.1   - November 20, 2015 - Initial Release, saves text only, no binary save.
+* Version 0.2   - September 22, 2016 - Added saveBlob() method, for saving files containing binary content.
+* Version 1.0.0 - January 19, 2020 - Added Maven Central build, changed package name to org.ainslec.*.
 
 ## Licenses
 

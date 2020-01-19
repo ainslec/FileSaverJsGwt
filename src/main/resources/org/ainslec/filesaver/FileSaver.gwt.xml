@@ -5,5 +5,5 @@
   <inherits name='com.google.gwt.user.User'/>
   <inherits name="com.google.gwt.resources.Resources" />
   <source path='client'/>
-  <entry-point class='org.consoli.filesaver.client.Initializer'/>
+  <entry-point class='org.ainslec.filesaver.client.Initializer'/>
 </module>
